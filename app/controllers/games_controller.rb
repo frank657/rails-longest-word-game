@@ -3,7 +3,7 @@ require 'open-uri'
 class GamesController < ApplicationController
   def new
     @letters = []
-    rand(8..20).times { @letters << ('a'..'z').to_a.sample }
+    10.times { @letters << ('a'..'z').to_a.sample }
   end
 
   def score
@@ -23,7 +23,3 @@ class GamesController < ApplicationController
     end
   end
 end
-
-# The word can't be built out of the original grid
-# The word is valid according to the grid, but is not a valid English word
-# The word is valid according to the grid and is an English word
